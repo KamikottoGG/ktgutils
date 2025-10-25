@@ -1,0 +1,33 @@
+[build-system]
+
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+
+name = "ktgutils"
+version = "0.1.1"
+description = "A package for improving and automating the work with Routers in asynchronous Telegram frameworks (e.g., Aiogram). It allows for dynamically finding, importing, and binding routers, as well as managing their dependencies (Middleware) during runtime."
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+   "aiogram>=3.22.0"
+]
+
+
+authors = [
+  {name = "Kamikotto", email = "kamikotto3@gmail.com"},
+]
+license = {file = "LICENSE"}
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ktgutils*"]
